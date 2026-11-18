@@ -17,6 +17,9 @@ consola y esta arranca el payload.
 > todavía no se ha probado** (no hay Switch conectada), así que revisa la sección
 > de problemas si algo falla.
 
+> **Vibecoding:** este proyecto se desarrolló con asistencia de IA. Lee el
+> [aviso de vibecoding](#10-aviso-de-vibecoding) antes de usarlo.
+
 ---
 
 ## 1. Requisitos
