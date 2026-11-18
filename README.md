@@ -50,6 +50,14 @@ El puerto USB OTG del ESP32-S3 usa pines fijos:
 | VBUS (5 V) | pin `5V` de la placa |
 | GND | `GND` |
 
+> **Placas con doble USB-C** (por ejemplo la *Goouuu ESP32-S3 N16R8*): el puerto
+> etiquetado como **USB** (el que no es CH340) es el nativo, conectado a
+> GPIO19/20; el otro es el **UART/CH340**, que es el que se usa para flashear y
+> ver los logs. Aunque el conector nativo lleve D+/D−, **no sirve tal cual como
+> host**: no saca 5 V por VBUS y sus pines CC están configurados como
+> dispositivo. Hay que sacar D+/D− de GPIO19/20 (header o pads del conector) y
+> llevar 5 V al VBUS del USB-A.
+
 La forma más sencilla y segura es usar un **receptáculo USB-A hembra** (o cortar
 un cable USB-A) y cablearlo al ESP32-S3:
 
