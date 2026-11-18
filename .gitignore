@@ -1,0 +1,6 @@
+build/
+sdkconfig
+sdkconfig.old
+main/payload.bin
+__pycache__/
+*.pyc

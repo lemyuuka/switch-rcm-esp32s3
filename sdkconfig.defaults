@@ -1,0 +1,17 @@
+# Valor por defecto del objetivo.
+CONFIG_IDF_TARGET="esp32s3"
+
+# La consola va por UART0. El periferico USB-Serial-JTAG comparte GPIO19/20
+# con el USB OTG, que aqui se usa como host, asi que hay que desactivarlo.
+CONFIG_ESP_CONSOLE_UART_DEFAULT=y
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=n
+CONFIG_ESP_CONSOLE_SECONDARY_NONE=y
+
+# Buffer de control del host USB (enumeracion de descriptores).
+CONFIG_USB_HOST_CONTROL_TRANSFER_MAX_SIZE=1024
+
+# Placa detectada: ESP32-S3 con 16 MB de flash. Ajusta si usas otro modulo.
+CONFIG_ESPTOOLPY_FLASHSIZE_16MB=y
+CONFIG_PARTITION_TABLE_SINGLE_APP_LARGE=y
+
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=4096
